@@ -14,10 +14,10 @@ public class FinancialsanctionimporterApplication {
 		SpringApplication.run(FinancialsanctionimporterApplication.class, args);
 	}
 
-	public void run() {
-		LOG.debug("Financial Sanction Importer Startup");
-
-
-	}
+//	public void run() {
+//		LOG.debug("Financial Sanction Importer Startup");
+//		
+//
+//	}
 
 }

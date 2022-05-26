@@ -1,23 +1,48 @@
-package com.financialsanctionimporter.importer;
+package com.financialsanctionimporter.importer.model;
 
-public class FinancialSanctionDesignationAddress {
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 
-    String addressLine1;
+@Entity
+@XmlRootElement (name = "Address")
+@XmlAccessorType (XmlAccessType.FIELD)
+public class DesignationAddress {
 
-    String addressLine2;
+	@GeneratedValue
+	@Id
+	private Long id;
+	
+	@XmlElement (name = "AddressLine1")
+    private String addressLine1;
 
-    String addressLine3;
+	@XmlElement (name = "AddressLine2")
+    private String addressLine2;
 
-    String addressLine4;
+	@XmlElement (name = "AddressLine3")
+    private String addressLine3;
 
-    String addressLine5;
+	@XmlElement (name = "AddressLine4")
+    private String addressLine4;
 
-    String addressLine6;
+	@XmlElement (name = "AddressLine5")
+    private String addressLine5;
 
-    String addressCountry;
+	@XmlElement (name = "AddressLine6")
+    private String addressLine6;
+
+	@XmlElement (name = "AddressCountry")
+    private String addressCountry;
 
 
-    public FinancialSanctionDesignationAddress(String addressLine1, String addressLine2, String addressLine3, String addressLine4, String addressLine5, String addressLine6, String addressCountry) {
+    public DesignationAddress() {
+    }
+    
+    public DesignationAddress(String addressLine1, String addressLine2, String addressLine3, String addressLine4, String addressLine5, String addressLine6, String addressCountry) {
         this.addressLine1 = addressLine1;
         this.addressLine2 = addressLine2;
         this.addressLine3 = addressLine3;
@@ -26,8 +51,17 @@ public class FinancialSanctionDesignationAddress {
         this.addressLine6 = addressLine6;
         this.addressCountry = addressCountry;
     }
+    
 
-    public String getAddressLine1() {
+    public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getAddressLine1() {
         return addressLine1;
     }
 

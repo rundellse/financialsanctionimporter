@@ -1,52 +1,71 @@
-package com.financialsanctionimporter.importer;
+package com.financialsanctionimporter.importer.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+
+@Entity
+@XmlRootElement
+@XmlAccessorType (XmlAccessType.FIELD)
 public class SanctionsImposedIndicators {
+	
+	@GeneratedValue
+	@Id
+	private Long id;
 
+	@XmlElement (name = "AssetFreeze")
     private boolean assetFreeze;
 
+	@XmlElement (name = "ArmsEmbargo")
     private boolean armsEmbargo;
 
+	@XmlElement (name = "TargetedArmsEmbargo")
     private boolean targetedArmsEmbargo;
 
+	@XmlElement (name = "CharteringOfShips")
     private boolean charteringOfShips;
 
+	@XmlElement (name = "ClosureOfRepresentativeOffices")
     private boolean closureOfRepresentativeOffices;
 
+	@XmlElement (name = "CrewServicingOfShipsAndAircraft")
     private boolean crewServicingOfShipsAndAircraft;
 
+	@XmlElement (name = "Deflag")
     private boolean deflag;
 
+	@XmlElement (name = "PreventionOfBusinessArrangements")
     private boolean preventionOfBusinessArrangements;
 
+	@XmlElement (name = "ProhibitionOfPortEntry")
     private boolean prohibitionOfPortEntry;
 
+	@XmlElement (name = "TravelBan")
     private boolean travelBan;
 
+	@XmlElement (name = "PreventionOfCharteringOfShips")
     private boolean preventionOfCharteringOfShips;
 
+	@XmlElement (name = "PreventionOfCharteringOfShipsAndAircraft")
     private boolean preventionOfCharteringOfShipsAndAircraft;
 
+	@XmlElement (name = "TechnicalAssistanceRelatedToAircraft")
     private boolean technicalAssistanceRelatedToAircraft;
+    	
 
+    public Long getId() {
+		return id;
+	}
 
-    public SanctionsImposedIndicators(boolean assetFreeze, boolean armsEmbargo, boolean targetedArmsEmbargo, boolean charteringOfShips, boolean closureOfRepresentativeOffices, boolean crewServicingOfShipsAndAircraft, boolean deflag, boolean preventionOfBusinessArrangements, boolean prohibitionOfPortEntry, boolean travelBan, boolean preventionOfCharteringOfShips, boolean preventionOfCharteringOfShipsAndAircraft, boolean technicalAssistanceRelatedToAircraft) {
-        this.assetFreeze = assetFreeze;
-        this.armsEmbargo = armsEmbargo;
-        this.targetedArmsEmbargo = targetedArmsEmbargo;
-        this.charteringOfShips = charteringOfShips;
-        this.closureOfRepresentativeOffices = closureOfRepresentativeOffices;
-        this.crewServicingOfShipsAndAircraft = crewServicingOfShipsAndAircraft;
-        this.deflag = deflag;
-        this.preventionOfBusinessArrangements = preventionOfBusinessArrangements;
-        this.prohibitionOfPortEntry = prohibitionOfPortEntry;
-        this.travelBan = travelBan;
-        this.preventionOfCharteringOfShips = preventionOfCharteringOfShips;
-        this.preventionOfCharteringOfShipsAndAircraft = preventionOfCharteringOfShipsAndAircraft;
-        this.technicalAssistanceRelatedToAircraft = technicalAssistanceRelatedToAircraft;
-    }
+	public void setId(Long id) {
+		this.id = id;
+	}
 
-
-    public boolean isAssetFreeze() {
+	public boolean isAssetFreeze() {
         return assetFreeze;
     }
 
