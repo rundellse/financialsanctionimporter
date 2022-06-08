@@ -10,6 +10,10 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 import javax.xml.bind.annotation.XmlType;
 
+/**
+ * A known name or alias for a sanctioned person or organisation. The key field is 'name6', this is always populated for a given
+ * name entry and contains the surname or organisation name (or equivalent).
+ */
 @Entity
 @XmlRootElement (name = "Name")
 @XmlAccessorType (XmlAccessType.FIELD)
@@ -47,6 +51,7 @@ public class DesignationName {
 	@XmlElement (name = "Name1")
     private String name1;
 
+	/** Designation names are either names or aliases */
 	@XmlElement (name = "NameType")
     private String nameType;
     

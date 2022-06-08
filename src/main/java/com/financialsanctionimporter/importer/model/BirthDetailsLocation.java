@@ -10,6 +10,9 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 import javax.xml.bind.annotation.XmlType;
 
+/**
+ * Contains the Town and Country of birth for a sanctioned individual.
+ */
 @Entity
 @XmlRootElement (name = "Location")
 @XmlAccessorType (XmlAccessType.FIELD)

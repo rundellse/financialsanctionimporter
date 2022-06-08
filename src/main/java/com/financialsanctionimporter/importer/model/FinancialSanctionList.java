@@ -17,6 +17,9 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 import com.financialsanctionimporter.importer.model.xmladapters.LocalDateXMLAdapter;
 
+/**
+ * Top level object containing the full Designations list.
+ */
 @Entity
 @XmlRootElement (name = "Designations")
 @XmlAccessorType (XmlAccessType.FIELD)

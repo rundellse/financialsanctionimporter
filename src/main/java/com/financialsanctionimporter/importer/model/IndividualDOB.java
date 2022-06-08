@@ -4,6 +4,10 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
+/**
+ * Date of Birth for a sanctioned individual. Unlike other dates across the Designations the fields are strings, as unknown days and months
+ * are represented by 'dd' and 'mm'. Format is 'dd/MM/yyyy'.
+ */
 @Entity
 public class IndividualDOB {
 	

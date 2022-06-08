@@ -23,6 +23,10 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 import com.financialsanctionimporter.importer.model.xmladapters.LocalDateXMLAdapter;
 
+/**
+ * A Designation is the basic unit of Financial Sanctions. Each instance represents either an organisation or individual to whom
+ * UK financial sanctions have been applied.
+ */
 @Entity
 @XmlRootElement (name = "Designation")
 @XmlAccessorType (XmlAccessType.FIELD)

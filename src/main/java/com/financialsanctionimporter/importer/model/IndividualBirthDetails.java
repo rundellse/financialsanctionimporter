@@ -13,6 +13,9 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 import javax.xml.bind.annotation.XmlType;
 
+/**
+ * Wrapper element for {@link BirthDetailsLocation.class}
+ */
 @Entity
 @XmlRootElement (name = "BirthDetails")
 @XmlAccessorType (XmlAccessType.FIELD)

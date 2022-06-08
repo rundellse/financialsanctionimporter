@@ -8,6 +8,9 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
+/**
+ * A Designation Address is a known address relating to a Designation organisation or party.
+ */
 @Entity
 @XmlRootElement (name = "Address")
 @XmlAccessorType (XmlAccessType.FIELD)

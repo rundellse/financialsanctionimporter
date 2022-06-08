@@ -8,6 +8,9 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
+/**
+ * List of booleans describing what type of sanctions have been applied to the Designation.
+ */
 @Entity
 @XmlRootElement
 @XmlAccessorType (XmlAccessType.FIELD)

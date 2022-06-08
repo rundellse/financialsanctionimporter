@@ -20,6 +20,9 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 import com.financialsanctionimporter.importer.model.xmladapters.IndividualDOBXMLAdapter;
 
+/**
+ * DesignationIndividualDetails is only populated on Designations for individual persons, rather than organisations. 
+ */
 @Entity
 @XmlRootElement (name = "IndividualDetails")
 @XmlAccessorType (XmlAccessType.FIELD)
